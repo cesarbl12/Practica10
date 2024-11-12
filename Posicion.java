@@ -1,22 +1,15 @@
-public class Posicion{
-    private int fila;
+public class Posicion {
+    private int renglon;
     private int columna;
-
-    public Posicion(int fila, int columna){
-        this.fila = fila;
+    
+    public Posicion(int renglon, int columna){
+        this.renglon = renglon;
         this.columna = columna;
     }
-
-    public int getFila(){
-        return fila;
+    public int getRenglon() {
+        return renglon;
     }
-
-    public int getColumna(){
+    public int getColumna() {
         return columna;
     }
-
-    //calcula la distancia entre dos posiciones
-    public double distancia(Posicion otra){
-        return Math.sqrt(Math.pow(this.fila - otra.getFila(), 2) + Math.pow(this.columna - otra.getColumna(), 2));
     }
-}

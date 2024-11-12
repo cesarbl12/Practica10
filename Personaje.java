@@ -1,13 +1,20 @@
-public abstract class Personaje extends Elemento{
-
-    protected int puntosDeVida=100;
+public abstract class Personaje extends Elemento implements Destruible{
     protected String nombre;
 
-    public Personaje(Posicion posicion, String tipo){
-        super(posicion, tipo);
-    }    
+    public Personaje(String nombre, Escenario escenario, Posicion posicion) {
+        super(escenario, posicion);  
+        this.nombre = nombre;
+    }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
+@Override
+    public void destruir(){
+    System.out.println("personaje destruido");
+    escenario.removerElemento(this);
+}
+
+
+
 }

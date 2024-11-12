@@ -1,17 +1,18 @@
-public abstract class Elemento {
+public class Elemento {
     protected Posicion posicion;
-    protected String tipo;
-
-    public Elemento(Posicion posicion, String tipo){
+    protected Escenario escenario;
+    public Elemento(Escenario escenario, Posicion posicion) {
+        this.escenario = escenario;
         this.posicion = posicion;
-        this.tipo = tipo;
     }
-
-    public Posicion getPosicion(){
+    public Posicion getPosicion() {
         return posicion;
     }
+    public void setPosicion(Posicion posicion) {
+        this.posicion = posicion;
+    }
 
-    public String getTipo(){
-        return tipo;
+    public char getRepresentacion() {
+        return 0;
     }
 }
